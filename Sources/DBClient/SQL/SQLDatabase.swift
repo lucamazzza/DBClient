@@ -84,7 +84,7 @@ public protocol SQLDatabase {
     ///     on the features currently available on the database given its version
     ///     rather then implementing a safe-but-limited solution with the features common
     ///     to all the versions.
-    var version: SQLDatabaseReportedVersion? { nil }
+    var version: SQLDatabaseReportedVersion? { get }
 
     /// Descriptor for the database's supported SQL-Dialect.
     /// It's allowed for different connection to the same database to have different
@@ -102,7 +102,7 @@ public protocol SQLDatabase {
     /// - Important: Conforming driver must have a mean to configure this value and use
     ///     its default  ``Logging/Logger/Level/debug`` level if no explicit value is provided.
     ///     It's also up to it to perform the query logging, inclusive the respect of the level.
-    var queryLogLevel Logger.Level? { .debug }
+    var queryLogLevel: Logger.Level? { get }
 
     /// Execute a SQL query on the database.
     /// Requests the execution of a given generic SQL Query after its serialization.
