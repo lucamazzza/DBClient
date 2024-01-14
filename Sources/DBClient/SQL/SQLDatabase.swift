@@ -25,11 +25,11 @@
 import NIOCore
 import Logging
 
-/// This is the core of `BSQL`. It is a common interface is the access point
-/// of the `BSQL` part of the package for all the SQL-Type database clients.
+/// This is the core of the library. It is a common interface is the access point
+/// of the generic `SQL` part of the package for all the SQL-Type database clients.
 ///
 /// Conformance to the ``SQLDatabase`` protocol allows the database client to
-/// use the `BSQL` functionnalities, for SQL-Type database clients.
+/// use the `SQL` functionnalities, for SQL-Type database clients.
 ///
 /// A SQL-Based driver package must provide a concrete implementation of the
 /// ``SQLDatabase`` protocol.
